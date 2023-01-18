@@ -49,7 +49,7 @@ class ParameterValidator implements InputTypeParameterInterface
      *
      * @return mixed
      */
-    public function resolve(object|null $source, array $args, mixed $context, ResolveInfo $info)
+    public function resolve(object|null $source, array $args, mixed $context, ResolveInfo $info): mixed
     {
         $value = $this->parameter->resolve($source, $args, $context, $info);
 
@@ -81,7 +81,7 @@ class ParameterValidator implements InputTypeParameterInterface
     /**
      * @return mixed
      */
-    public function getDefaultValue()
+    public function getDefaultValue(): mixed
     {
         return $this->parameter->getDefaultValue();
     }
