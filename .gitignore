@@ -4,3 +4,4 @@
 /.phpunit.result.cache
 tags
 .idea
+composer.phar
