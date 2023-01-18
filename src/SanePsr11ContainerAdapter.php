@@ -37,7 +37,7 @@ class SanePsr11ContainerAdapter implements ContainerInterface
      *
      * @return mixed Entry.
      */
-    public function get($id)
+    public function get(string $id)
     {
         return $this->container->get($id);
     }
@@ -53,7 +53,7 @@ class SanePsr11ContainerAdapter implements ContainerInterface
      *
      * @return bool
      */
-    public function has($id)
+    public function has(string $id): bool
     {
         if (class_exists($id) && !$this->container->has($id)) {
             try {
