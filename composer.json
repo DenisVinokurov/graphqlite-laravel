@@ -21,7 +21,7 @@
     },
     "require": {
         "php": ">=8.0",
-        "thecodingmachine/graphqlite": "^6.1",
+        "thecodingmachine/graphqlite": "dev-public",
         "illuminate/console": "^9",
         "illuminate/container": "^9",
         "illuminate/support": "^9",
@@ -55,6 +55,17 @@
             ]
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.org",
+            "exclude": ["thecodingmachine/graphqlite"]
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/DenisVinokurov/graphqlite.git"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
