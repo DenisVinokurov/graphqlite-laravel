@@ -22,7 +22,7 @@ class ValidateException extends \Exception implements GraphQLExceptionInterface
     /**
      * @return bool
      */
-    public function isClientSafe()
+    public function isClientSafe(): bool
     {
         return true;
     }
@@ -44,7 +44,8 @@ class ValidateException extends \Exception implements GraphQLExceptionInterface
     public function getExtensions(): array
     {
         return [
-            'argument' => $this->argumentName
+            'argument' => $this->argumentName,
+            'category' => $this->getCategory(),
         ];
     }
 }
