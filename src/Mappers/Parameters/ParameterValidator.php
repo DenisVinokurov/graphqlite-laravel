@@ -6,6 +6,7 @@ namespace TheCodingMachine\GraphQLite\Laravel\Mappers\Parameters;
 
 use GraphQL\Type\Definition\InputType;
 use GraphQL\Type\Definition\ResolveInfo;
+use GraphQL\Type\Definition\Type;
 use Illuminate\Validation\Factory as ValidationFactory;
 use TheCodingMachine\GraphQLite\Exceptions\GraphQLAggregateException;
 use TheCodingMachine\GraphQLite\Laravel\Exceptions\ValidateException;
@@ -68,7 +69,7 @@ class ParameterValidator implements InputTypeParameterInterface
         return $value;
     }
 
-    public function getType(): InputType
+    public function getType(): InputType&Type
     {
         return $this->parameter->getType();
     }
